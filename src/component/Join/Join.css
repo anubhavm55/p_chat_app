@@ -1,0 +1,80 @@
+.JoinPage{
+    background-color: rgb(31, 29, 29);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.JoinContainer{
+   
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.JoinContainer > img{
+    width: 25vmax;
+}
+.JoinContainer > h1{
+    color: white;
+    font-size: 2.5vmax;
+    width: 25vmax;
+    border-bottom: 0.2vmax solid white;
+    text-align: center;
+    padding: 1vmax;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+.JoinContainer > input::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vmax;
+}
+
+#joinInput{
+    width: 25vmax;
+    padding: 1.5vmax;
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vmax;
+    margin: 2vmax;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.joinbtn{
+    width: 25vmax;
+    height: 4vmax;
+    border: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    font-size: 1.8vmax;
+    background-color: darkred;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.joinFront{
+    width: 25vmax;
+    height: 4vmax;
+    padding: 1vmax;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: rgb(255, 27, 27);
+    transform: translateX(-0.3vmax) translateY(-0.6vmax);
+}
+.joinFront:hover{
+    transform: translateY(-0.8vmax) translateX(-0.3vmax);
+    transition: 0.3s; 
+}
+.joinbtn:active .joinFront{
+    transform: translateY(-0.2vmax) translateX(-0.3vmax);
+    transition: 0.1s;
+}
