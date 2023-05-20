@@ -31,7 +31,7 @@ const Chat = () => {
         document.getElementById('chatInput').value = "";
     }
 
-    console.log(messages);
+    //console.log(messages);
     useEffect(() => {
         socket = socketIo(ENDPOINT, { transports: ['websocket'] });
 
@@ -40,12 +40,12 @@ const Chat = () => {
             setid(socket.id);
 
         })
-        console.log(socket);
+        //console.log(socket);
         socket.emit('joined', { user: user_name })
 
         socket.on('welcome', (data) => {
             setMessages([...messages, data]);
-            console.log(data.user, data.message);
+            //console.log(data.user, data.message);
         })
 
         return () => {
@@ -58,17 +58,17 @@ const Chat = () => {
     useEffect(() => {
         socket.on('sendMessage', (data) => {
             setMessages([...messages, data]);
-            console.log(data.user, data.message, data.id);
+            //console.log(data.user, data.message, data.id);
         })
 
         socket.on('userJoined', (data) => {
             setMessages([...messages, data]);
-            console.log(data.user, data.message);
+            //console.log(data.user, data.message);
         })
 
         socket.on('leave', (data) => {
             setMessages([...messages, data]);
-            console.log(data.user, data.message)
+            //console.log(data.user, data.message)
         })
 
         return () => {
